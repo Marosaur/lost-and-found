@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lost and Found Admin Homepage</title>
+        <script src = "admin_homepage.js"></script>
+        <link rel="stylesheet" href="user_homepage.css">
+    </head>
+    <body>
+        <div id = "user_items">
+        <h1>Admin Homepage</h1>
+        <input type='button' value='Logout' id = 'logout_button' class = "buttons" onclick='logout();'>
+
+        <h2 id = 'section_title'>Registered Users</h2>
+        <input type='button' value='Registered Users' class = "buttons" onclick='registered_users();'>
+        <input type='button' value='Notices' class = "buttons" onclick='pending_notices();'>
+        <input type='button' value='Notices by User ID' class = "buttons" onclick='search_user();'>
+
+        <div id = "extra"></div>
+
+        <div id = "tables" class = "notices"></div>
+        </div>
+        <div class = "modal-container" id = "modal-container">
+            <div class = "modal" id = "modal">
+                
+            </div>
+        </div>
+    </body>
+</html>

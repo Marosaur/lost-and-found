@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lost and Found User Homepage</title>
+        <script src = "user_homepage.js"></script>
+        <link rel="stylesheet" href="user_homepage.css">
+    </head>
+    <body>
+        <div id = "user_items">
+            <div id = "profilePicture"></div><input type='button' class = "buttons" id = "logout_button" value='Logout' onclick='logout();'>
+
+            <h2>Notices</h2>
+
+            <input type='button' value='Add Notice' class = "buttons" onclick='add_notice();'>
+            <input type='button' value='View My Notices' class = "buttons" onclick='show_my_notices();'>
+            
+            <div class = "notices" id = "notices"></div>
+
+            
+        </div>
+        <div class = "modal-container" id = "modal-container">
+            <div class = "modal" id = "modal">
+                
+            </div>
+        </div>
+    </body>
+</html>

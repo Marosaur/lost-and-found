@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MySQL Setup</title>
+</head>
+
+<body>
+	<h1>MySQL Setup</h1>
+	<p>This application will set up your MySql server.</p>
+	<form action = "mysql-setup.php" method = "post" >
+
+		<p>Use the drop-down list to select whether you are using the xampp or the MAMP Web Server:
+		<select name = "server">
+		<option value = "xampp">xampp</option>
+		<option value = "mamp">MAMP</option>
+		</select>
+		<p><strong>Advanced Users Only (Windows or Macintosh or Linux)</strong>.If you have already set your own root password for MySql, please type the password here, otherwise leave this field empty. Root Password: <input type = "password" size = "12" name = "rootPW"></p>
+
+		<p>
+		<input type = "submit" value = "Submit">
+		</p>
+	</form>
+
+</body>
+</html>

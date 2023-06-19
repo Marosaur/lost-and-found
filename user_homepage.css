@@ -1,0 +1,138 @@
+@import
+url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #edeef6;
+    font-family: 'Poppins', sans-serif;
+    align-items: left;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.input {
+    background-color: #fff;
+    border-color: #000;
+    border: 0;
+    border-radius: 5px;
+    width: 350px;
+    align-items: left;
+    padding: 20px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+#user_items {
+    margin: 20px;
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0 0 0 0.4);
+}
+
+#logout_button {
+    position: absolute;
+    cursor: pointer;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+}
+
+.modal .close_button{
+    cursor: pointer;
+    background-color: #47a386;
+    margin-left: 95%;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+    border-color: #000;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 20px;
+}
+
+.modal .submit_button{
+    cursor: pointer;
+    background-color: #47a386;
+    color: #fff;
+    text-align: center;
+    padding: 10px 25px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-color: #000;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 100px;
+}
+
+table {
+    width: 100%;
+}
+
+.notices {
+    margin-top: 20px;
+    padding: 20px;
+    text-align: left;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notices tr.lost :first-child{
+    background-color: #A34764;
+}
+
+.notices tr.found :first-child{
+    background-color: #4792A3;
+}
+
+.notices th{
+    background-color: #47a386;
+    color: #fff;
+    align-items: center;
+}
+
+.buttons {
+    cursor: pointer;
+    background-color: #47a386;
+    color: #fff;
+    padding: 10px 25px;
+    margin-bottom: 10px;
+    border-color: #000;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.modal-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-container.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.modal {
+    background-color: #fff;
+    width: 600px;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0 0 0 0.2);
+}

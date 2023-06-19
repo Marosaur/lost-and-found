@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lost and Found Register</title>
+        <script src="login.js"></script>
+        <link rel="stylesheet" href="login.css">
+    </head>
+    <body>
+        <div id = login_items>
+        <h1>Registration</h1>
+        <div id = "error"></div>
+        <input type="text" id="username2" class = 'input' autofocus placeholder = "Username">
+        <input type="text" id="nickname2" class = 'input' autofocus placeholder = "Nickname">
+        <input type="text" id="email" class = 'input' autofocus placeholder = "Your Email">
+        <input type="password" id="password" class = 'input' autofocus placeholder = "Password">
+        <input type="password" id="confirm_password" class = 'input' autofocus placeholder = "Confirm Password">
+        <select name="gender" id="gender" class = 'input' autofocus placeholder = "Gender">
+            <option value = "M">Male</option>
+            <option value = "F">Female</option>
+            <option value = "NB">Non-binary</option>
+        </select>
+        <input type="date" class = 'input' id="birthday"><br>
+        <input type="button" id = "login" class = 'buttons' value="Submit" onclick="submit();"><br>
+        <input type="button" class = 'buttons' value="Back" onclick="login_page();">
+        </div>
+    </body>
+</html>

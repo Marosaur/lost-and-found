@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lost and Found Login</title>
+        <script src="login.js"></script>
+        <link rel="stylesheet" href="login.css">
+    </head>
+    <body onload="check_cookie();">
+        <div id = login_items>
+            <h1>Login</h1>
+            <div id = "input_div">
+                <input type="text" id="username" class = 'input' autofocus placeholder = "Username"> <br>
+                <input type="password" id="password" class = 'input' autofocus placeholder = "Password"> <br>
+            </div>
+            <input type="button" value="Login" class = 'buttons' id = 'login' onclick="verify();"> <br>
+            <input type="button" value="Register" class = 'buttons' onclick="register();">
+            <input type="button" value="Forgot Password" class = 'buttons' onclick="forgot_password();">
+            <br>
+            <div id="status"></div>
+        </div>
+    </body>
+</html>

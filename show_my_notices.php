@@ -1,0 +1,44 @@
+<?php
+    $username = $_COOKIE['username'];
+    $server = "localhost"; $user = "wbip"; $pw = "wbip123"; $db = "lost_and_found";
+    $connect = mysqli_connect($server, $user, $pw, $db);
+    if(!$connect) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+    $userQuery = "SELECT * FROM notices
+                WHERE userid = '$username'";
+
+    $result = mysqli_query($connect, $userQuery);
+
+    print "<input type='button' value='x' class = 'close_button' onclick='close_details();'>";
+
+    if (mysqli_num_rows($result) == 0) {
+        print "No records were found.";
+    }
+    else {
+        print "<table class = 'notices'>";
+        print "<tr><th>Type</th><th>Title</th><th>Venue</th>
+        <th>Date</th><th></th><th></th></tr>";
+        
+        while ($row = mysqli_fetch_assoc($result)) {
+            if ($row['notice_type'] == 'lost') {
+                print "<tr class = 'lost'><td>" . ucfirst($row['notice_type']) . "</td><td>";
+            }
+            else {
+                print "<tr class = 'found'><td>" . ucfirst($row['notice_type']) . "</td><td>";
+            }
+            
+            print $row['title']. "</td><td>" .
+            $row['venue'] . "</td><td>" .
+            $row['date_lost'] . "</td><td>" . 
+            "<input class='details' style = 'background-color: white' type='button' value='Details' onclick='load_details(" . $row['id'] . ");'/></td><td>" .
+            "<input class='respond' style = 'background-color: white' type='button' value='Cancel' onclick='cancel(" . $row['id'] . ");'/></td></tr>";
+        }
+
+        print "</table>";
+        
+    }
+    
+    mysqli_close($connect);
+?>
